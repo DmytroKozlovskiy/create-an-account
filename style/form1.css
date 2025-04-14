@@ -1,0 +1,65 @@
+body {
+  background-color: rgb(229, 229, 229);
+  font-family: var(--font-family);
+}
+
+form {
+  background-color: white;
+  width: 570px;
+  height: 590px;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: auto 1fr 50%;
+  gap: 11px;
+
+  h1 {
+    grid-column: span 3;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 133%;
+    color: #1c1c1c;
+  }
+
+  label:has([name="firstname"]),
+  label:has([value="female"]),
+  label:has(select) {
+    grid-column: span 2;
+  }
+
+  label:has([name="email"]),
+  >p,
+  button,
+  hr,
+  footer {
+    grid-column: span 3;
+  }
+
+  label:not(:has([type="radio"])) {
+    display: grid;
+  }
+
+  
+
+  button+p {
+    text-align: center;
+  }
+
+  hr {
+    height: 1px;
+    width: 100%;
+    border: none;
+    background-color: #e4e4e4;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
