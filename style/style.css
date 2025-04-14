@@ -3,6 +3,11 @@
     --second-family: "Inter", sans-serif;
   }  
 
+  body {
+    background-color: rgb(229, 229, 229);
+    font-family: var(--font-family);
+  }
+
     main {
     display: flex;
     flex-direction: column;
