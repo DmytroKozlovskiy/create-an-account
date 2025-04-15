@@ -3,7 +3,7 @@ form {
   width: 570px;
   height: 590px;
   border-radius: 6px;
-  padding: 35px;
+  padding: 30px;
   margin: 20px auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: grid;
@@ -33,7 +33,6 @@ form {
     }
 
     
-
   label:has([type="file"]) {
     position: relative;
 
@@ -53,6 +52,29 @@ form {
   button:last-child {
     grid-column: span 2;
   }
+  }
+
+
+  label:has([name="name"], [name="country"], [name="zip"], [name="city"], [name="email"], [name="phone"]) {
+    
+    height: 38px;
+  }
+
+
+  label>input[name="name"], [name="country"], [name="zip"], [name="city"], [name="email"], [name="phone"] {
+    width: 245px;
+    height: 38px;
+    box-sizing: border-box;
+  }
+
+  button:last-child {
+    background-color:  #007BFF;
+    border: #007BFF;
+    width: 150px;
+    height: 38px;
+    border-radius: 6px;
+    color: white;
+  }
 
   button {
     place-self: start;
@@ -60,4 +82,3 @@ form {
 
 
 
-}
